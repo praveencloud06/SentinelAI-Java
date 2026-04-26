@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    # If running Spring Boot on your host:
+    url: jdbc:postgresql://localhost:5111/sentinelai
+    # If running Spring Boot in a container, use:
+    # url: jdbc:postgresql://host.docker.internal:5111/sentinelai
+    username: sentinel
+    password: sentinel_pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3
+      embedding:
+        model: llama3
+
+logging:
+  level:
+    root: INFO
+    '[com.sentinel.ai]': DEBUG
+
+# Custom application properties
+sentinelai:
+  jira:
+    base-url: https://praveend06.atlassian.net/ # Change to your Jira instance URL
+    username: praveend06@gmail.com
+    api-token: ATATT3xFfGF0rrGLvESKbrIhKvxDfCOD1H4OkagYX5hcoANW2v_qkGK3iKR9Rbp2CJd8S-AG8T4krSpWxcTJ3DDWFCplvW7yZpXERDrv_0-ECASjMB0g9efwp3wA_zXxI3n72Xb11wKXAgqryDyeQjUnrWlBsK4ifWYvlwHMDa4WDJgFuJ1XKhU=69BC651D

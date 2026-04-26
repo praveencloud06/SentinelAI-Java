@@ -1,0 +1,11 @@
+.classpath
+.factorypath
+*.tmp
+/.mvn
+.project
+/.settings
+/docker_pgadmin
+/docker_pgdata
+/.vscode
+/target
+*.cmd
